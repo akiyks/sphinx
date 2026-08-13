@@ -94,10 +94,10 @@
 
 % N.B.: array must *not* have been loaded prior to this location, but this is
 % not guaranteed if templates/latex/latex.tex.jinja gets altered.
+\providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
 \IfFileExists{array-2024-06-01.sty}
-   {\RequirePackage{array}[=v2.6]}
+   {\RequirePackage{array}[=2024-06-01]}
    {\RequirePackage{array}}
-
 % Extends tabulary and longtable via patches and custom macros to support
 % merged cells possibly containing code-blocks in complex tables
 \RequirePackage{tabulary}
@@ -121,7 +121,7 @@
 % About why pinning longtable version to an older one, see discussion at top
 % of this file about issue #14465.  This is perhaps a provisory work-around.
 \IfFileExists{longtable-2020-01-07.sty}
-    {\RequirePackage{longtable}[=v4.13]}
+    {\RequirePackage{longtable}[=2020-01-07]}
     {\RequirePackage{longtable}}
 % User interface to set-up whitespace before and after tables:
 \newcommand*\sphinxtablepre {0pt}%
